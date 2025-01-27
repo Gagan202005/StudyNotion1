@@ -29,7 +29,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: JSON.parse("https://study-notion-frontend-brown.vercel.app"),// Allow only requests from this origin
+    origin: ["*"],// Allow only requests from this origin
     credentials: true,
     maxAge: 14400,
   })
