@@ -23,13 +23,13 @@ database.connect();
 app.use(express.json());
 app.use(cookieParser());
 
-const whitelist = process.env.CORS_ORIGIN
-  ? JSON.parse(process.env.CORS_ORIGIN)
-  : ["*"];
+// const whitelist = process.env.CORS_ORIGIN
+//   ? JSON.parse(process.env.CORS_ORIGIN)
+//   : ["*"];
 
 app.use(
   cors({
-    origin: whitelist,// Allow only requests from this origin
+    origin: JSON.parse("https://study-notion-frontend-brown.vercel.app"),// Allow only requests from this origin
     credentials: true,
     maxAge: 14400,
   })
