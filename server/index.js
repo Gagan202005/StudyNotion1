@@ -29,9 +29,9 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: ["*"],// Allow only requests from this origin
+    origin: "*",// Allow only requests from this origin
     credentials: true,
-    maxAge: 14400,
+
   })
 );
 
