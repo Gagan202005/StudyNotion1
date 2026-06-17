@@ -70,6 +70,29 @@ The platform features OTP-based email verification, Razorpay payment integration
 
 ---
 
+## 📸 Screenshots
+
+> *Add your project screenshots here by replacing the placeholder links.*
+
+<details>
+<summary><b>Click to view screenshots</b></summary>
+
+| Home Page | Course Catalog |
+| :---: | :---: |
+| <img src="https://via.placeholder.com/600x350?text=Home+Page" alt="Home Page" width="100%"/> | <img src="https://via.placeholder.com/600x350?text=Course+Catalog" alt="Course Catalog" width="100%"/> |
+
+| Student Dashboard | Course Video Player |
+| :---: | :---: |
+| <img src="https://via.placeholder.com/600x350?text=Student+Dashboard" alt="Student Dashboard" width="100%"/> | <img src="https://via.placeholder.com/600x350?text=Video+Player" alt="Video Player" width="100%"/> |
+
+| Instructor Dashboard | Course Builder |
+| :---: | :---: |
+| <img src="https://via.placeholder.com/600x350?text=Instructor+Dashboard" alt="Instructor Dashboard" width="100%"/> | <img src="https://via.placeholder.com/600x350?text=Course+Builder" alt="Course Builder" width="100%"/> |
+
+</details>
+
+---
+
 ## 🏗️ Architecture
 
 ### System Architecture Diagram
