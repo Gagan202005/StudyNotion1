@@ -562,8 +562,8 @@ erDiagram
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/StudyNotion.git
-cd StudyNotion
+git clone https://github.com/Gagan202005/StudyNotion1.git
+cd StudyNotion1
 ```
 
 ### 2. Install Dependencies
