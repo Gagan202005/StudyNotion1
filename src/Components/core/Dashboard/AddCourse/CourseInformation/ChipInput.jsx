@@ -13,8 +13,6 @@ const ChipInput = ({name, label, register, errors, setValue,placeholder}) => {
     useEffect(()=> {
         register(name, {
             required:true,
-            // validate: (value) => value.length > 0
-   
         });
         if(editCourse ) {
             settags(JSON.parse(course?.tag));

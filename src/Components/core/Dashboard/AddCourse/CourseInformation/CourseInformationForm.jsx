@@ -20,7 +20,9 @@ const CourseInformationForm = () => {
         setValue,
         getValues,
         formState:{errors},
-    } = useForm();
+    } = useForm();//Custom hook to manage the entire form.
+
+
 
     const dispatch = useDispatch();
     const {token} = useSelector((state)=>state.auth);
@@ -53,7 +55,7 @@ const CourseInformationForm = () => {
     },[])
 
     const isFormUpdated = () => {
-        const currentValues = getValues();
+        const currentValues = getValues();//Get the entire form values when no argument is supplied to this function.
         if(currentValues.courseTitle !== course.courseName ||
             currentValues.courseShortDesc !== course.courseDescription ||
             currentValues.coursePrice !== course.price ||
@@ -72,7 +74,7 @@ const CourseInformationForm = () => {
 
         if(editCourse) {
             if(isFormUpdated()) {
-                const currentValues = getValues();
+            const currentValues = getValues();
             const formData = new FormData();
 
             formData.append("courseId", course._id);

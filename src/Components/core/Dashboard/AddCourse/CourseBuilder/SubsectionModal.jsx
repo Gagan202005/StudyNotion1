@@ -19,7 +19,7 @@ const SubsectionModal = ({
     edit=false,
     view=false
 }) => {
-    const { token } = useSelector((state) => state.auth);
+    const { token } = useSelector((state) => state.auth);//A hook to access the redux store's state. 
     const { course } = useSelector((state) => state.course);
     const [loading, setLoading] = useState(false);
 

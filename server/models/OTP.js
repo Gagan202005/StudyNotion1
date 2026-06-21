@@ -36,14 +36,15 @@ async function sendVerificationEmail(email, otp) {
 		throw error;
 	}
 }
-// send otp after saving the otp in db
-OTPSchema.post("save", async function (doc) {
+OTPSchema.pre("save", async function (next) {
     try {
-        if (doc.isNew) {
-            await sendVerificationEmail(doc.email, doc.otp);
+        if (this.isNew) {
+            await sendVerificationEmail(this.email, this.otp);
         }
+        next();//In a pre-save hook, calling next() tells Mongoose to continue saving the document.
     } catch (error) {
         console.error("Email sending failed:", error);
+        next(error);
     }
 });
 

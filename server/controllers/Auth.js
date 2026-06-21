@@ -149,7 +149,7 @@ exports.login = async (req, res) => {
 				}
 			);
 
-			// Save token to user document in database
+			// Save token to user object (not save in db)
 			user.token = token;
 			user.password = undefined;
 			// Set cookie for token and return success response

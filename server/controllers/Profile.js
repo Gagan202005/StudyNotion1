@@ -90,7 +90,7 @@ exports.deleteAccount = async (req, res) => {
 					  for(const r of rat){
 						await RatingAndReview.findByIdAndDelete({_id:r})
 					  }
-					  await CourseProgress.findOneAndDelete({courseID:courseId},{userID:id})
+					  await CourseProgress.findOneAndDelete({courseID:courseId})
 					  // Unenroll students from the course
 					  const studentsEnrolled = course.studentsEnrolled
 					  for (const studentId of studentsEnrolled) {

@@ -255,7 +255,8 @@ exports.editCourse = async (req, res) => {
 	  // Update only the fields that are present in the request body
 	  for (const key in updates) {
 		if (updates.hasOwnProperty(key)) {
-		
+			//for...in loops over all enumerable properties, including inherited ones.
+			//used to check whether a property exists directly on an object itself not inherited ones
 			course[key] = updates[key]
 		  
 		}
@@ -338,13 +339,6 @@ exports.editCourse = async (req, res) => {
 		  message: `Could not find course with id: ${courseId}`,
 		})
 	  }
-  
-	  // if (courseDetails.status === "Draft") {
-	  //   return res.status(403).json({
-	  //     success: false,
-	  //     message: `Accessing a draft course is forbidden`,
-	  //   });
-	  // }
   
 	  let totalDurationInSeconds = 0
 	  courseDetails.courseContent.forEach((content) => {

@@ -49,12 +49,10 @@ export default function Upload({
 
   useEffect(() => {
     register(name, { required: true })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [register])
 
   useEffect(() => {
     setValue(name, selectedFile)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedFile, setValue])
 
   return (
@@ -76,7 +74,7 @@ export default function Upload({
                 className="h-full w-full rounded-md object-cover"
               />
             ) : (
-              <Player aspectRatio="16:9" playsInline src={previewSource} />
+              <Player aspectRatio="16:9" playsInline src={previewSource} />//Player is the root component of the Video-React player.
             )}
             {!viewData && (
               <button

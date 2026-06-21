@@ -52,7 +52,7 @@ const userSchema = new mongoose.Schema(
 				ref: "Course",
 			},
 		],
-		token: {
+		token: { // reset password token
 			type: String,
 		},
 		resetPasswordExpires: {

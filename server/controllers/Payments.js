@@ -121,8 +121,8 @@ exports.capturePayment = async (req, res) => {
                         //update the course
                         for(const course_id of courses){
                         console.log("verify courses=",course_id);
-                        const course = await Course.findByIdAndUpdate(
-                            course_id,
+                        const course = await Course.updateOne(
+                            {_id:course_id},
                             {$push:{studentsEnrolled:userId}},
                             {new:true}
                         );
