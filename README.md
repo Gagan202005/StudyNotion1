@@ -17,18 +17,6 @@
   <img src="https://img.shields.io/badge/Tailwind_CSS-3.2-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind"/>
 </p>
 
-<p align="center">
-  <a href="#-features">Features</a> •
-  <a href="#-architecture">Architecture</a> •
-  <a href="#-workflow-diagrams">Workflows</a> •
-  <a href="#-database-schema">Schema</a> •
-  <a href="#-api-reference">API</a> •
-  <a href="#-getting-started">Setup</a> •
-  <a href="#-deployment">Deploy</a>
-</p>
-
----
-
 ## 📖 Overview
 
 StudyNotion is a comprehensive ed-tech platform (similar to Udemy/Coursera) where:
@@ -70,26 +58,9 @@ The platform features OTP-based email verification, Razorpay payment integration
 
 ---
 
-## 📸 Screenshots
+## 📸 Demo
 
-> *Add your project screenshots here by replacing the placeholder links.*
-
-<details>
-<summary><b>Click to view screenshots</b></summary>
-
-| Home Page | Course Catalog |
-| :---: | :---: |
-| <img src="https://via.placeholder.com/600x350?text=Home+Page" alt="Home Page" width="100%"/> | <img src="https://via.placeholder.com/600x350?text=Course+Catalog" alt="Course Catalog" width="100%"/> |
-
-| Student Dashboard | Course Video Player |
-| :---: | :---: |
-| <img src="https://via.placeholder.com/600x350?text=Student+Dashboard" alt="Student Dashboard" width="100%"/> | <img src="https://via.placeholder.com/600x350?text=Video+Player" alt="Video Player" width="100%"/> |
-
-| Instructor Dashboard | Course Builder |
-| :---: | :---: |
-| <img src="https://via.placeholder.com/600x350?text=Instructor+Dashboard" alt="Instructor Dashboard" width="100%"/> | <img src="https://via.placeholder.com/600x350?text=Course+Builder" alt="Course Builder" width="100%"/> |
-
-</details>
+https://github.com/user-attachments/assets/dcdcd5a7-2026-4f09-a2f1-41dbed59756c
 
 ---
 
