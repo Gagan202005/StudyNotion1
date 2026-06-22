@@ -87,7 +87,7 @@ graph TB
         H[("🍃 MongoDB Atlas<br/>Mongoose ODM")]
         I["☁️ Cloudinary<br/>(Images & Videos)"]
         J["💳 Razorpay<br/>(Payments)"]
-        K["📧 Nodemailer<br/>(Emails)"]
+        K["📧 Resend<br/>(Emails)"]
     end
 
     A --> B --> C
@@ -120,7 +120,7 @@ graph TB
 | **Authentication** | JWT, bcrypt | Stateless auth & password hashing |
 | **Payments** | Razorpay | Course purchase & payment verification |
 | **Media Storage** | Cloudinary | Image/video upload, CDN delivery |
-| **Email** | Nodemailer | OTP, password reset, enrollment emails |
+| **Email** | Resend | OTP, password reset, enrollment emails |
 | **File Upload** | express-fileupload | Multipart form handling |
 
 ### Project Structure
@@ -161,7 +161,7 @@ StudyNotion/
 │   │   ├── auth.js               #   JWT verification + role guards
 │   │   └── demo.js               #   Demo mode protection
 │   ├── utils/
-│   │   ├── mailSender.js         #   Nodemailer transport
+│   │   ├── mailSender.js         #   Resend email utility
 │   │   ├── imageUploader.js      #   Cloudinary upload utility
 │   │   └── secToDuration.js      #   Time formatting
 │   └── mail/templates/           #   4 HTML email templates
@@ -183,7 +183,7 @@ sequenceDiagram
     participant R as ⚛️ React
     participant S as 🟢 Express
     participant DB as 🍃 MongoDB
-    participant E as 📧 Nodemailer
+    participant E as 📧 Resend
 
     U->>R: Fill signup form
     R->>S: POST /auth/sendotp {email}
@@ -551,7 +551,7 @@ erDiagram
 - **MongoDB Atlas** account — [Free Tier](https://www.mongodb.com/atlas)
 - **Cloudinary** account — [Sign Up](https://cloudinary.com/)
 - **Razorpay** account — [Dashboard](https://dashboard.razorpay.com/)
-- **Gmail App Password** (for Nodemailer) — [Generate](https://myaccount.google.com/apppasswords)
+- **Resend** account — [Sign Up](https://resend.com/)
 
 ### 1. Clone the Repository
 
@@ -603,10 +603,9 @@ FOLDER_NAME=your_cloudinary_folder
 RAZORPAY_KEY=your_razorpay_key
 RAZORPAY_SECRET=your_razorpay_secret
 
-# Email (Gmail SMTP)
-MAIL_HOST=smtp.gmail.com
-MAIL_USER=your_email@gmail.com
-MAIL_PASS=your_gmail_app_password
+# Email (Resend)
+RESEND_API_KEY=your_resend_api_key
+MAIL_FROM=your_verified_email@yourdomain.com
 
 # CORS
 CORS_ORIGIN=["http://localhost:3000"]
@@ -678,9 +677,8 @@ npm run server
 | `FOLDER_NAME` | Server `.env` | Cloudinary upload folder |
 | `RAZORPAY_KEY` | Server `.env` | Razorpay key ID |
 | `RAZORPAY_SECRET` | Server `.env` | Razorpay key secret |
-| `MAIL_HOST` | Server `.env` | SMTP host (smtp.gmail.com) |
-| `MAIL_USER` | Server `.env` | Email address for sending |
-| `MAIL_PASS` | Server `.env` | Gmail App Password |
+| `RESEND_API_KEY` | Server `.env` | Resend API key |
+| `MAIL_FROM` | Server `.env` | Verified sender email (Resend) |
 | `CORS_ORIGIN` | Server `.env` | Allowed origins (JSON array) |
 | `CONTACT_MAIL` | Server `.env` | Contact form recipient |
 
